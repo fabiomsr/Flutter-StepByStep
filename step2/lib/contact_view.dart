@@ -9,18 +9,18 @@ class ContactsPage extends StatelessWidget {
         appBar: new AppBar(
           title: new Text("Contacts"),
         ),
-        body: new ContactListWidget(kContacts)
+        body: new ContactList(kContacts)
       );
   }
 
 }
 
 
-class ContactListWidget extends StatelessWidget {
+class ContactList extends StatelessWidget {
 
   final List<Contact> _contacts;
 
-  ContactListWidget(this._contacts);
+  ContactList(this._contacts);
 
   @override
   Widget build(BuildContext context) {
@@ -31,28 +31,24 @@ class ContactListWidget extends StatelessWidget {
         );
   }
 
-  List<_ContactWidget> _buildContactList(){
-    return _contacts.map((contact) => new _ContactWidget(contact)).toList();
+  List<_ContactListItem> _buildContactList() {
+    return _contacts.map((contact) => new _ContactListItem(contact))
+                    .toList();
   }
 
 }
 
 
 
-class _ContactWidget extends StatelessWidget {
-  final Contact _contact;
+class _ContactListItem extends ListItem {
 
-  _ContactWidget(this._contact);
-
-  @override
-  Widget build(BuildContext context) {
-    return new ListItem(
+  _ContactListItem(Contact contact) :
+    super(
+      title : new Text(contact.fullName),
+      subtitle: new Text(contact.email),
       leading: new CircleAvatar(
-        child: new Text(_contact.fullname[0])
-    ),
-      title: new Text(_contact.fullname),
-      subtitle: new Text(_contact.email)
+        child: new Text(contact.fullName[0])
+      )
     );
-  }
 
 }

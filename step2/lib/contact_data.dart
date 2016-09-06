@@ -1,75 +1,75 @@
 
 class Contact {
-  final String fullname;
+  final String fullName;
   final String email;
 
-  const Contact({this.fullname, this.email});
+  const Contact({this.fullName, this.email});
 }
 
 
 const kContacts = const <Contact>[
     const Contact(
-      fullname: 'Romain Hoogmoed',
+      fullName: 'Romain Hoogmoed',
       email:'romain.hoogmoed@example.com'
     ),
     const Contact(
-      fullname: 'Emilie Olsen',
+      fullName: 'Emilie Olsen',
       email:'emilie.olsen@example.com'
     ),
     const Contact(
-      fullname: 'Téo Lefevre',
+      fullName: 'Téo Lefevre',
       email:'téo.lefevre@example.com'
     ),
     const Contact(
-      fullname: 'Nicole Cruz',
+      fullName: 'Nicole Cruz',
       email:'nicole.cruz@example.com'
     ),
     const Contact(
-      fullname: 'Ramna Peixoto',
+      fullName: 'Ramna Peixoto',
       email:'ramna.peixoto@example.com'
     ),
     const Contact(
-      fullname: 'Jose Ortiz',
+      fullName: 'Jose Ortiz',
       email:'jose.ortiz@example.com'
     ),
     const Contact(
-      fullname: 'Alma Christensen',
+      fullName: 'Alma Christensen',
       email:'alma.christensen@example.com'
     ),
     const Contact(
-      fullname: 'Sergio Hill',
+      fullName: 'Sergio Hill',
       email:'sergio.hill@example.com'
     ),
     const Contact(
-      fullname: 'Malo Gonzalez',
+      fullName: 'Malo Gonzalez',
       email:'malo.gonzalez@example.com'
     ),
     const Contact(
-      fullname: 'Miguel Owens',
+      fullName: 'Miguel Owens',
       email:'miguel.owens@example.com'
     ),
     const Contact(
-      fullname: 'Lilou Dumont',
+      fullName: 'Lilou Dumont',
       email:'lilou.dumont@example.com'
     ),
     const Contact(
-      fullname: 'Ashley Stewart',
+      fullName: 'Ashley Stewart',
       email:'ashley.stewart@example.com'
     ),
     const Contact(
-      fullname: 'Roman Zhang',
+      fullName: 'Roman Zhang',
       email:'roman.zhang@example.com'
     ),
     const Contact(
-      fullname: 'Ryan Roberts',
+      fullName: 'Ryan Roberts',
       email:'ryan.roberts@example.com'
     ),
     const Contact(
-      fullname: 'Sadie Thomas',
+      fullName: 'Sadie Thomas',
       email:'sadie.thomas@example.com'
     ),
     const Contact(
-      fullname: 'Belen Serrano',
+      fullName: 'Belen Serrano',
       email:'belen.serrano@example.com '
     )
   ];
