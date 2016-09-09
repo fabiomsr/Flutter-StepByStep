@@ -14,6 +14,7 @@ A example of an Android / iOS app written using Google Flutter with MVP architec
 
 
 [en0]:https://medium.com/@develodroid/flutter-i-intro-and-install-a8bf6dfcc7c8#.lxynmgs8j
+[en1]:https://medium.com/@develodroid/flutter-ii-material-design-f437e3e8e6a9#.sytqg6uu3
 
 [es0]:https://medium.com/@XensS/flutter-ii-material-design-ed2cb4d0422e#.fhjsnl97j
 [es1]:https://medium.com/@XensS/flutter-ii-material-design-ed2cb4d0422e#.alqke4o9a
