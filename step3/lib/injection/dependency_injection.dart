@@ -28,7 +28,7 @@ class Injector {
     switch(_flavor) {
       case Flavor.MOCK: return new MockContactRepository();
       default: // Flavor.PRO:
-       return new RamdonUserRepository();
+       return new RandomUserRepository();
     }
   }
 }
