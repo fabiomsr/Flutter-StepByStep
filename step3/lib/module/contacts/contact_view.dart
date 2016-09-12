@@ -73,7 +73,7 @@ class _ContactListState extends State<ContactList> implements ContactListViewCon
       widget = new Center(
         child: new Padding(
           padding: const EdgeInsets.only(left: 16.0, right: 16.0),
-          child: new LinearProgressIndicator()
+          child: new CircularProgressIndicator()
         )
       );
     }else {
