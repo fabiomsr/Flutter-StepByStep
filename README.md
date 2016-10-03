@@ -45,4 +45,4 @@ License
 [es4]:https://medium.com/@XensS/flutter-v-material-design-ii-7b0196e7b42d#.248a7snwx
 
 [header]: https://raw.githubusercontent.com/fabiomsr/Flutter-StepByStep/master/art/StepByStep.png
-[preview]:
+[preview]:https://raw.githubusercontent.com/fabiomsr/Flutter-StepByStep/master/art/example.gif
