@@ -95,12 +95,12 @@ class _ContactListState extends State<ContactList> implements ContactListViewCon
     return _contacts.map((contact) =>
                           new _ContactListItem(
                             contact: contact,
-                            onTap: () { showContactPage(context, contact); }
+                            onTap: () { _showContactPage(context, contact); }
                           ))
                     .toList();
   }
 
-  void showContactPage(BuildContext context, Contact contact) {
+  void _showContactPage(BuildContext context, Contact contact) {
     Navigator.push(context, new MaterialPageRoute<Null>(
       settings: const RouteSettings(name: ContactPage.routeName),
       builder: (BuildContext context) => new ContactPage(contact)

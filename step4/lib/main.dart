@@ -9,7 +9,7 @@ void main() {
     new MaterialApp(
       title: 'Flutter Demo',
       theme: new ThemeData(
-        primarySwatch: Colors.blue
+        primarySwatch: Colors.indigo
       ),
       home: new ContactsPage()
     )

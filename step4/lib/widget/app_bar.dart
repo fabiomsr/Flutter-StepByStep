@@ -24,9 +24,9 @@ class FlexibleAppBar extends AppBar {
             new DecoratedBox(
                 decoration: new BoxDecoration(
                   gradient: new LinearGradient(
-                    begin: const FractionalOffset(0.5, 0.0),
-                    end: const FractionalOffset(0.5, 0.30),
-                    colors: <Color>[const Color(0x90000000), const Color(0x00000000)]
+                      begin: const FractionalOffset(0.5, 0.6),
+                      end: const FractionalOffset(0.5, 1.0),
+                      colors: <Color>[const Color(0x00000000), const Color(0x70000000)]
                   )
                 )
             )

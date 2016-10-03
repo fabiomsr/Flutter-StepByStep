@@ -30,7 +30,8 @@ class ContactPage extends StatelessWidget {
               _buildCategory(Icons.location_on, Icons.map,
                             <String>[_contact.location.street, _contact.location.city]),
               _buildCategory(Icons.contact_mail, Icons.email, <String>[_contact.email]),
-              _buildCategory(Icons.today, Icons.add_alert, <String>[_contact.birthday]),
+              _buildCategory(Icons.today, Icons.add_alert,
+                <String>["Birthday ${_contact.birthday}"]),
             ]
         )
       )
@@ -119,7 +120,7 @@ class _ContactCategoryItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new Padding(
-      padding:  const EdgeInsets.symmetric(vertical: 16.0),
+      padding: const EdgeInsets.symmetric(vertical: 16.0),
       child: new Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: _buildRow(context)

@@ -14,7 +14,6 @@ class Contact {
   final Location location;
   final List<Phone> phones;
 
-
   const Contact({this.fullName, this.gender, this.email, this.imageUrl,
      this.birthday, this.location, this.phones});
 
@@ -23,7 +22,7 @@ class Contact {
                     gender = map['gender'],
                     email = map['email'],
                     imageUrl = map['picture']['large'],
-                    birthday = "Birthday ${_formatter.format(DateTime.parse(map['dob']))}",
+                    birthday = _formatter.format(DateTime.parse(map['dob'])),
                     location = new Location.fromMap(map['location']),
                     phones = <Phone>[
                       new Phone(type: 'Home',   number: map['phone']),
