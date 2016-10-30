@@ -2,14 +2,14 @@
 
 A example of an Android / iOS app written using Google Flutter with MVP architecture
 
-|  Step |                Article               |         Artículo(Spanish)         |         Preview         |
-|:-----:|:------------------------------------:|:---------------------------------:|:-----------------------:|
-| Step0 | [Installation and Introduction][en0] | [Instalación e Indroducción][es0] |      [Step0 Preview]    |
-| Step1 | [Material Design][en1]               | [Material Design][es1]            |      [Step1 Preview]    |
-| Step2 | [Lists and Items][en2]               | [Listas e Ítems][es2]             |      [Step2 Preview]    |
-| Step3 | [Model-View-Presenter][en3]          | [Model-View-Presenter][es3]       |      [Step3 Preview]    |
-| Step4 | [Material Design II][en4]            | [Material Design II][es4]         |      [Step4 Preview]    |
-| Step5 | [Drawer][en5]                        | [Menú Lateral][es5]               |      [Step5 Preview]    |
+|  Step |                Article               |         Artículo(Spanish)         |              Preview              |
+|:-----:|:------------------------------------:|:---------------------------------:|:---------------------------------:|
+| Step0 | [Installation and Introduction][en0] | [Instalación e Indroducción][es0] |  ![Step0 Preview][Step0 Preview]  |
+| Step1 | [Material Design][en1]               | [Material Design][es1]            |  ![Step1 Preview][Step1 Preview]  |
+| Step2 | [Lists and Items][en2]               | [Listas e Ítems][es2]             |  ![Step2 Preview][Step2 Preview]  |
+| Step3 | [Model-View-Presenter][en3]          | [Model-View-Presenter][es3]       |  ![Step3 Preview][Step3 Preview]  |
+| Step4 | [Material Design II][en4]            | [Material Design II][es4]         |  ![Step4 Preview][Step4 Preview]  |
+| Step5 | [Drawer][en5]                        | [Menú Lateral][es5]               |  ![Step5 Preview][Step5 Preview]  |
 
 
 License
