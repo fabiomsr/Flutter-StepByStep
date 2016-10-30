@@ -2,4 +2,4 @@ name: step3
 description: A new flutter project.
 dependencies:
   flutter:
-    path: ../../../flutter-sdk/packages/flutter
+    sdk: flutter

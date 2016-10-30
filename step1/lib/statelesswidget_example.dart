@@ -7,7 +7,7 @@ void main() {
       theme: new ThemeData(
         primarySwatch: Colors.blue
       ),
-      home: new StatelessWidgetExample("Hello, World")
+      home: new StatelessWidgetExample("Hello, World!")
     )
   );
 }
