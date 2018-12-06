@@ -5,16 +5,15 @@ class ContactsPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return new Scaffold(
-        appBar: new AppBar(
-          title: new Text("Contacts"),
+    return Scaffold(
+        appBar: AppBar(
+          title: Text("Contacts"),
         ),
-        body: new ContactList(kContacts)
+        body: ContactList(kContacts)
       );
   }
 
 }
-
 
 class ContactList extends StatelessWidget {
 
@@ -24,30 +23,27 @@ class ContactList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return new MaterialList(
-          type: MaterialListType.twoLine,
-          padding: new EdgeInsets.symmetric(vertical: 8.0),
+    return ListView(
+          padding: EdgeInsets.symmetric(vertical: 8.0),
           children: _buildContactList()
         );
   }
 
   List<_ContactListItem> _buildContactList() {
-    return _contacts.map((contact) => new _ContactListItem(contact))
+    return _contacts.map((contact) => _ContactListItem(contact))
                     .toList();
   }
 
 }
 
-
-
-class _ContactListItem extends ListItem {
+class _ContactListItem extends ListTile {
 
   _ContactListItem(Contact contact) :
     super(
-      title : new Text(contact.fullName),
-      subtitle: new Text(contact.email),
-      leading: new CircleAvatar(
-        child: new Text(contact.fullName[0])
+      title : Text(contact.fullName),
+      subtitle: Text(contact.email),
+      leading: CircleAvatar(
+        child: Text(contact.fullName[0])
       )
     );
 

@@ -5,10 +5,10 @@ void main() {
   runApp(
     new MaterialApp(
       title: 'Flutter Demo',
-      theme: new ThemeData(
+      theme: ThemeData(
         primarySwatch: Colors.blue
       ),
-      home: new ContactsPage()
+      home: ContactsPage()
     )
   );
 }
