@@ -12,7 +12,7 @@ class ContactListPresenter {
   ContactRepository _repository;
 
   ContactListPresenter(this._view){
-    _repository = new Injector().contactRepository;
+    _repository = Injector().contactRepository;
   }
 
   void loadContacts(){
