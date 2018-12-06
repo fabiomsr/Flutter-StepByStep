@@ -4,10 +4,10 @@ void main() {
   runApp(
     new MaterialApp(
       title: 'Flutter Demo',
-      theme: new ThemeData(
+      theme: ThemeData(
         primarySwatch: Colors.blue
       ),
-      home: new StatelessWidgetExample("Hello, World!")
+      home: StatelessWidgetExample("Hello, World!")
     )
   );
 }
@@ -19,12 +19,12 @@ class StatelessWidgetExample extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return new Scaffold(
-      appBar: new AppBar(
-        title: new Text(_appBarTitle)
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(_appBarTitle)
       ),
-      body: new Center(
-        child: new Text('Demo')
+      body: Center(
+        child: Text('Demo')
       )
     );
   }

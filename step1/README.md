@@ -1,8 +1,5 @@
 # step1
 
-A new flutter project.
+Step1 project.
 
-## Getting Started
 
-For help getting started with Flutter, view our online
-[documentation](http://flutter.io/).
