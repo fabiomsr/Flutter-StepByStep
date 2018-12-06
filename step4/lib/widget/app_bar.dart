@@ -1,32 +1,35 @@
 
 import 'package:flutter/material.dart';
 
-class FlexibleAppBar extends AppBar {
+class FlexibleAppBar extends SliverAppBar {
   static const double height = 256.0;
 
   FlexibleAppBar(String title, String imageUrl) : super(
+    pinned: true,
     expandedHeight: height,
-    flexibleSpace: new FlexibleSpaceBar(
-        title: new Text(title),
+    flexibleSpace: FlexibleSpaceBar(
+        title: Text(title),
         background: _buildBackground(imageUrl)
+        
     )
   );
 
   static Widget _buildBackground(String imageUrl) {
-    return new Stack (
+    return Stack (
+      fit: StackFit.expand,
         children: <Widget>[
-            new Image.network(
+            Image.network(
                 imageUrl,
-                fit: ImageFit.cover,
+                fit: BoxFit.cover,
                 height: height
             ),
 
-            new DecoratedBox(
-                decoration: new BoxDecoration(
-                  gradient: new LinearGradient(
-                      begin: const FractionalOffset(0.5, 0.6),
-                      end: const FractionalOffset(0.5, 1.0),
-                      colors: <Color>[const Color(0x00000000), const Color(0x70000000)]
+            DecoratedBox(
+                decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                      begin: FractionalOffset(0.5, 0.6),
+                      end: FractionalOffset(0.5, 1.0),
+                      colors: <Color>[Color(0x00000000), Color(0x70000000)]
                   )
                 )
             )

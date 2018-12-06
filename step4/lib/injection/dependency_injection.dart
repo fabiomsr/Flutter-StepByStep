@@ -11,7 +11,7 @@ enum Flavor {
 
 /// Simple DI
 class Injector {
-  static final Injector _singleton = new Injector._internal();
+  static final Injector _singleton = Injector._internal();
   static Flavor _flavor;
 
   static void configure(Flavor flavor) {
@@ -26,9 +26,9 @@ class Injector {
 
   ContactRepository get contactRepository {
     switch(_flavor) {
-      case Flavor.MOCK: return new MockContactRepository();
+      case Flavor.MOCK: return MockContactRepository();
       default: // Flavor.PRO:
-       return new RandomUserRepository();
+       return RandomUserRepository();
     }
   }
 }
