@@ -6,11 +6,11 @@ class ContactsPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return new Scaffold(
-        appBar: new AppBar(
-          title: new Text("Contacts"),
+    return Scaffold(
+        appBar: AppBar(
+          title: Text("Contacts"),
         ),
-        body: new ContactList()
+        body: ContactList()
       );
   }
 
@@ -25,7 +25,7 @@ class ContactList extends StatefulWidget{
   ContactList({ Key key }) : super(key: key);
 
   @override
-  _ContactListState createState() => new _ContactListState();
+  _ContactListState createState() => _ContactListState();
 }
 
 
@@ -35,16 +35,16 @@ class _ContactListState extends State<ContactList> implements ContactListViewCon
 
   List<Contact> _contacts;
 
-  bool _IsSearching;
+  bool _isSearching;
 
   _ContactListState() {
-    _presenter = new ContactListPresenter(this);
+    _presenter =  ContactListPresenter(this);
   }
 
   @override
   void initState() {
     super.initState();
-    _IsSearching = true;
+    _isSearching = true;
     _presenter.loadContacts();
   }
 
@@ -54,7 +54,7 @@ class _ContactListState extends State<ContactList> implements ContactListViewCon
 
     setState(() {
       _contacts = items;
-      _IsSearching = false;
+      _isSearching = false;
     });
 
   }
@@ -69,17 +69,16 @@ class _ContactListState extends State<ContactList> implements ContactListViewCon
 
     var widget;
 
-    if(_IsSearching) {
-      widget = new Center(
-        child: new Padding(
-          padding: const EdgeInsets.only(left: 16.0, right: 16.0),
-          child: new CircularProgressIndicator()
+    if(_isSearching) {
+      widget = Center(
+        child: Padding(
+          padding: EdgeInsets.only(left: 16.0, right: 16.0),
+          child: CircularProgressIndicator()
         )
       );
     }else {
-      widget = new MaterialList(
-            type: MaterialListType.twoLine,
-            padding: new EdgeInsets.symmetric(vertical: 8.0),
+      widget = ListView(
+            padding: EdgeInsets.symmetric(vertical: 8.0),
             children: _buildContactList()
           );
     }
@@ -88,7 +87,7 @@ class _ContactListState extends State<ContactList> implements ContactListViewCon
   }
 
   List<_ContactListItem> _buildContactList() {
-    return _contacts.map((contact) => new _ContactListItem(contact))
+    return _contacts.map((contact) => _ContactListItem(contact))
                     .toList();
   }
 
@@ -99,14 +98,14 @@ class _ContactListState extends State<ContactList> implements ContactListViewCon
 ///   Contact List Item
 ///
 
-class _ContactListItem extends ListItem {
+class _ContactListItem extends ListTile {
 
   _ContactListItem(Contact contact) :
     super(
-      title : new Text(contact.fullName),
-      subtitle: new Text(contact.email),
-      leading: new CircleAvatar(
-        child: new Text(contact.fullName[0])
+      title : Text(contact.fullName),
+      subtitle: Text(contact.email),
+      leading: CircleAvatar(
+        child: Text(contact.fullName[0])
       )
     );
 

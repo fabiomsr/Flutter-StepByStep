@@ -1,79 +1,77 @@
-
 import 'dart:async';
 
 import 'contact_data.dart';
 
-class MockContactRepository implements ContactRepository{
+class MockContactRepository implements ContactRepository {
 
-  Future<List<Contact>> fetch(){
-    return new Future.value(kContacts);
+  Future<List<Contact>> fetch() {
+    return Future.value(kContacts);
   }
 
 }
 
-
-const kContacts = const <Contact>[
-    const Contact(
+const kContacts = <Contact>[
+    Contact(
       fullName: 'Romain Hoogmoed',
       email:'romain.hoogmoed@example.com'
     ),
-    const Contact(
+    Contact(
       fullName: 'Emilie Olsen',
       email:'emilie.olsen@example.com'
     ),
-    const Contact(
+    Contact(
       fullName: 'Téo Lefevre',
       email:'téo.lefevre@example.com'
     ),
-    const Contact(
+    Contact(
       fullName: 'Nicole Cruz',
       email:'nicole.cruz@example.com'
     ),
-    const Contact(
+    Contact(
       fullName: 'Ramna Peixoto',
       email:'ramna.peixoto@example.com'
     ),
-    const Contact(
+    Contact(
       fullName: 'Jose Ortiz',
       email:'jose.ortiz@example.com'
     ),
-    const Contact(
+    Contact(
       fullName: 'Alma Christensen',
       email:'alma.christensen@example.com'
     ),
-    const Contact(
+    Contact(
       fullName: 'Sergio Hill',
       email:'sergio.hill@example.com'
     ),
-    const Contact(
+    Contact(
       fullName: 'Malo Gonzalez',
       email:'malo.gonzalez@example.com'
     ),
-    const Contact(
+    Contact(
       fullName: 'Miguel Owens',
       email:'miguel.owens@example.com'
     ),
-    const Contact(
+    Contact(
       fullName: 'Lilou Dumont',
       email:'lilou.dumont@example.com'
     ),
-    const Contact(
+    Contact(
       fullName: 'Ashley Stewart',
       email:'ashley.stewart@example.com'
     ),
-    const Contact(
+    Contact(
       fullName: 'Roman Zhang',
       email:'roman.zhang@example.com'
     ),
-    const Contact(
+    Contact(
       fullName: 'Ryan Roberts',
       email:'ryan.roberts@example.com'
     ),
-    const Contact(
+    Contact(
       fullName: 'Sadie Thomas',
       email:'sadie.thomas@example.com'
     ),
-    const Contact(
+    Contact(
       fullName: 'Belen Serrano',
       email:'belen.serrano@example.com '
     )
