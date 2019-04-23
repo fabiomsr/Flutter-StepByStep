@@ -35,7 +35,7 @@ License
 [en2]:https://medium.com/@develodroid/flutter-iii-lists-and-items-6bfa7348ab1b#.j5w2rk8iy
 [en3]:https://medium.com/@develodroid/flutter-iv-mvp-architecture-e4a979d9f47e#.aexy0nmud
 
-[es0]:https://medium.com/@XensS/flutter-ii-material-design-ed2cb4d0422e#.fhjsnl97j
+[es0]:https://medium.com/@XensS/flutter-i-instalaci%C3%B3n-e-introducci%C3%B3n-878c155ab4a8#.1k7aqghea
 [es1]:https://medium.com/@XensS/flutter-ii-material-design-ed2cb4d0422e#.alqke4o9a
 [es2]:https://medium.com/@XensS/flutter-iii-listas-e-%C3%ADtems-818be6b9c226#.6u0y0t926
 [es3]:https://medium.com/@XensS/flutter-iv-arquitectura-mvp-162a479aeb79#.8uci8775d
