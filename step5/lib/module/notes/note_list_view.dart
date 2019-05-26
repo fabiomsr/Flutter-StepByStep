@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:step5/widget/navigation_drawer.dart';
+import 'package:step5/widget/drawer.dart';
 
 
 class NotesPage extends StatelessWidget {
@@ -8,13 +8,13 @@ class NotesPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return new Scaffold(
-        appBar: new AppBar(
-            title: new Text("Notes"),
+    return Scaffold(
+        appBar: AppBar(
+            title: Text("Notes"),
             ),
-        drawer: new NavigationDrawer(),
-        body: new Center(
-            child: new Text("Notes")
+        drawer: AppDrawer(),
+        body: Center(
+            child: Text("Notes")
         )
     );
   }

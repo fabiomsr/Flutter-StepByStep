@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:meta/meta.dart';
 import '../../data/contact_data.dart';
 import '../../widget/app_bar.dart';
 
 class ContactPage extends StatelessWidget {
 
-  static const String routeName = '/contacts/detail';
+  static const String routeName = '/contact';
 
   final Contact _contact;
 
@@ -21,17 +22,22 @@ class ContactPage extends StatelessWidget {
         primarySwatch: _contact.gender == 'male' ? Colors.teal : Colors.pink
       ),
       child: new Scaffold(
-        appBar: new FlexibleAppBar(_contact.fullName, _contact.imageUrl),
-        appBarBehavior: AppBarBehavior.under,
-        body: new Block(
-            padding: new EdgeInsets.only(top: FlexibleAppBar.height + statusBarHeight),
-            children: <_ContactCategory>[
-              _buildPhoneCategory(),
-              _buildCategory(Icons.location_on, Icons.map,
-                            <String>[_contact.location.street, _contact.location.city]),
-              _buildCategory(Icons.contact_mail, Icons.email, <String>[_contact.email]),
-              _buildCategory(Icons.today, Icons.add_alert, <String>[_contact.birthday]),
-            ]
+        body: CustomScrollView( 
+          slivers: [ 
+            FlexibleAppBar(_contact.fullName, _contact.imageUrl),
+            SliverList(
+              delegate: SliverChildListDelegate(
+                <_ContactCategory>[
+                  _buildPhoneCategory(),
+                  _buildCategory(Icons.location_on, Icons.map,
+                                <String>[_contact.location.street, _contact.location.city]),
+                  _buildCategory(Icons.contact_mail, Icons.email, <String>[_contact.email]),
+                  _buildCategory(Icons.today, Icons.add_alert,
+                    <String>["Birthday ${_contact.birthday}"]),
+                ]
+              )
+            )
+          ]
         )
       )
     );
@@ -119,7 +125,7 @@ class _ContactCategoryItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new Padding(
-      padding:  const EdgeInsets.symmetric(vertical: 16.0),
+      padding: const EdgeInsets.symmetric(vertical: 16.0),
       child: new Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: _buildRow(context)

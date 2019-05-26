@@ -4,7 +4,7 @@ import 'package:intl/intl.dart';
 
 class Contact {
 
-  static final DateFormat _formatter = new DateFormat('MMMM d, yyyy');
+  static final DateFormat _formatter = DateFormat('MMMM d, yyyy');
 
   final String fullName;
   final String gender;
@@ -14,7 +14,6 @@ class Contact {
   final Location location;
   final List<Phone> phones;
 
-
   const Contact({this.fullName, this.gender, this.email, this.imageUrl,
      this.birthday, this.location, this.phones});
 
@@ -23,8 +22,8 @@ class Contact {
                     gender = map['gender'],
                     email = map['email'],
                     imageUrl = map['picture']['large'],
-                    birthday = "Birthday ${_formatter.format(DateTime.parse(map['dob']))}",
-                    location = new Location.fromMap(map['location']),
+                    birthday = _formatter.format(DateTime.parse(map['dob']['date'])),
+                    location = Location.fromMap(map['location']),
                     phones = <Phone>[
                       new Phone(type: 'Home',   number: map['phone']),
                       new Phone(type: 'Mobile', number: map['cell'])
